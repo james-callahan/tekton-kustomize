@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tekton-triggers-core-interceptors
+spec:
+  template:
+    spec:
+      containers:
+      - name: tekton-triggers-core-interceptors
+        image: gcr.io/tekton-releases/github.com/tektoncd/triggers/cmd/interceptors
+        args:
+          - -logtostderr
+          - -stderrthreshold=INFO
+        env:
+          - name: SYSTEM_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+          - name: CONFIG_LOGGING_NAME
+            value: config-logging-triggers
+          - name: CONFIG_OBSERVABILITY_NAME
+            value: config-observability-triggers
+          - name: METRICS_DOMAIN
+            value: tekton.dev/triggers
+          # assuming service and deployment names are same always for consistency
+          - name: INTERCEPTOR_TLS_SVC_NAME
+            value: tekton-triggers-core-interceptors
+          - name: INTERCEPTOR_TLS_SECRET_NAME
+            value: tekton-triggers-core-interceptors-certs
+        ports:
+          - containerPort: 8443
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 8443
+            scheme: HTTPS
+          initialDelaySeconds: 5
+          periodSeconds: 10
+          timeoutSeconds: 5
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsUser: 65532
+          runAsGroup: 65532
+          runAsNonRoot: true
+          capabilities:
+            drop:
+              - ALL
+      serviceAccountName: tekton-triggers-core-interceptors
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tekton-triggers-core-interceptors
+spec:
+  ports:
+    - name: https
+      port: 8443

@@ -1,0 +1,64 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: ClusterInterceptor
+metadata:
+  name: cel
+  labels:
+    server/type: https
+spec:
+  clientConfig:
+    service:
+      name: tekton-triggers-core-interceptors
+      path: cel
+      port: 8443
+---
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: ClusterInterceptor
+metadata:
+  name: bitbucket
+  labels:
+    server/type: https
+spec:
+  clientConfig:
+    service:
+      name: tekton-triggers-core-interceptors
+      path: bitbucket
+      port: 8443
+---
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: ClusterInterceptor
+metadata:
+  name: slack
+  labels:
+    server/type: https
+spec:
+  clientConfig:
+    service:
+      name: tekton-triggers-core-interceptors
+      path: slack
+      port: 8443
+---
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: ClusterInterceptor
+metadata:
+  name: github
+  labels:
+    server/type: https
+spec:
+  clientConfig:
+    service:
+      name: tekton-triggers-core-interceptors
+      path: github
+      port: 8443
+---
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: ClusterInterceptor
+metadata:
+  name: gitlab
+  labels:
+    server/type: https
+spec:
+  clientConfig:
+    service:
+      name: tekton-triggers-core-interceptors
+      path: gitlab
+      port: 8443

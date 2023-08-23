@@ -1,0 +1,13 @@
+nameReference:
+  - kind: Service
+    version: v1
+    fieldSpecs:
+      - path: spec/clientConfig/service/name
+        group: triggers.tekton.dev
+        kind: ClusterInterceptor
+
+namespace:
+  - path: spec/clientConfig/service/namespace
+    create: true
+    group: triggers.tekton.dev
+    kind: ClusterInterceptor

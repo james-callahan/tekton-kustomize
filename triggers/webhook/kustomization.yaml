@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:
+  app.kubernetes.io/component: webhook
+resources:
+  - clusterrolebinding.yaml
+  - deployment.yaml
+  - service.yaml
+  - serviceaccount.yaml
+  - role.yaml
+  - webhooks.yaml
+images:
+  - name: gcr.io/tekton-releases/github.com/tektoncd/triggers/cmd/webhook
+    newTag: v0.24.1@sha256:314d28791b9adeee9e38c6fb0b1ed40deeee097f495f73a82e5831ff6393dfcc
