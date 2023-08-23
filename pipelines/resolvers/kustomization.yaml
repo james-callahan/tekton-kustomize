@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:
+  app.kubernetes.io/component: resolvers
+resources:
+  - bundleresolver-config.yaml
+  - cluster-resolver-config.yaml
+  - clusterrole.yaml
+  - config-feature-flags.yaml
+  - deployment.yaml
+  - git-resolver-config.yaml
+  - hubresolver-config.yaml
+  - role.yaml
+  - serviceaccount.yaml
+  - service.yaml
+images:
+  - name: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/resolvers
+    newTag: v0.50.1@sha256:4316cb6fcca2c2936c2eaa29897f3fcde3f76c65e8ce5668e511a688dbb59557

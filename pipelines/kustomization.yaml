@@ -1,0 +1,29 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:
+  app.kubernetes.io/part-of: tekton-pipelines
+resources:
+  - crd-clustertask.yaml
+  - crd-customrun.yaml
+  - crd-pipelinerun.yaml
+  - crd-pipeline.yaml
+  - crd-resolutionrequest.yaml
+  - crd-taskrun.yaml
+  - crd-task.yaml
+  - crd-verificationpolicy.yaml
+  - ./controller
+  - ./events
+  - ./resolvers
+  - ./webhook
+  - clusterrole-aggregate-edit.yaml
+  - clusterrole-aggregate-view.yaml
+  - config-defaults.yaml
+  - config-events.yaml
+  - config-feature-flags.yaml
+  - config-info.yaml
+  - config-leader-election.yaml
+  - config-logging.yaml
+  - config-observability.yaml
+  - config-registry-cert.yaml
+  - config-spire.yaml
+  - role-tekton-pipelines-info.yaml
