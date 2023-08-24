@@ -31,7 +31,7 @@ patches:
                     value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/sidecarlogresults:v0.50.1@sha256:dbcbd3b156ac74539f25780f639891489130fdee72871351e5a8b9ff194cc7bb
                   - name: WORKINGDIRINIT_IMAGE
                     # renovate: datasource=docker
-                    value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/workingdirinit:v0.50.1@sha256:cdce382e0e5fa8e29132f1cbae8de2610f050ad5db9a355a5a93b913a03b209f
+                    value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/workingdirinit:v0.51.0@sha256:11ab9f4b515288808d8df99b12a35319e0bebdfa8ac760e96cb255c8196c1ca7
                   - name: SHELL_IMAGE
                     # renovate: datasource=docker
                     value: cgr.dev/chainguard/busybox:latest@sha256:19f02276bf8dbdd62f069b922f10c65262cc34b710eea26ff928129a736be791
