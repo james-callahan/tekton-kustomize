@@ -25,7 +25,7 @@ patches:
                     value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/entrypoint:v0.50.1@sha256:0c66040a16142a598d5aa9f310b1cbf66e843aa7114188f5d0ab5d36b463a09b
                   - name: NOP_IMAGE
                     # renovate: datasource=docker
-                    value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/nop:v0.50.1@sha256:537f2e9884fb14d5b42f1d749c62d7404bf061ec8983a07a15a556a2b560875a
+                    value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/nop:v0.51.0@sha256:4f2aec6b610fa3d3264f28bc7fb5234be54d68560cb40592b1cfe3b87eb28696
                   - name: SIDECARLOGRESULTS_IMAGE
                     # renovate: datasource=docker
                     value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/sidecarlogresults:v0.50.1@sha256:dbcbd3b156ac74539f25780f639891489130fdee72871351e5a8b9ff194cc7bb
