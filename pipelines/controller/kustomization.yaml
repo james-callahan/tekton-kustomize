@@ -22,7 +22,7 @@ patches:
                 env:
                   - name: ENTRYPOINT_IMAGE
                     # renovate: datasource=docker
-                    value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/entrypoint:v0.50.1@sha256:0c66040a16142a598d5aa9f310b1cbf66e843aa7114188f5d0ab5d36b463a09b
+                    value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/entrypoint:v0.51.0@sha256:2c96a27199bd506c79de066e39933f5b1a195858c9d9525300b96e0a9e7b25b4
                   - name: NOP_IMAGE
                     # renovate: datasource=docker
                     value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/nop:v0.50.1@sha256:537f2e9884fb14d5b42f1d749c62d7404bf061ec8983a07a15a556a2b560875a
