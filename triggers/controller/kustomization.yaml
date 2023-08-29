@@ -25,4 +25,4 @@ patches:
                     value: gcr.io/tekton-releases/github.com/tektoncd/triggers/cmd/eventlistenersink:v0.24.1@sha256:37d41d06d0c306e7b875baa594b9e1ff51ad56d2828703144680b547d56ec2ef
 images:
   - name: gcr.io/tekton-releases/github.com/tektoncd/triggers/cmd/controller
-    newTag: v0.24.1@sha256:d928774533783ce98fdc95f1fa2b7ac3b2c519e8366512a2e65ed9f540e3c0bb
+    newTag: v0.25.0@sha256:cf9aa3895eb475e491173576927a8c066c7f537630306233b39985509bec186c
