@@ -4,6 +4,7 @@ commonLabels:
   app.kubernetes.io/component: controller
 resources:
   - clusterrolebinding.yaml
+  - config-leader-election.yaml
   - deployment.yaml
   - service.yaml
   - serviceaccount.yaml
