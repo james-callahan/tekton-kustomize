@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:
+  app.kubernetes.io/component: dashboard
+  app.kubernetes.io/part-of: tekton-dashboard
+resources:
+  - clusterrole-backend.yaml
+  - clusterrole-tenant.yaml
+  - clusterrolebinding-backend.yaml
+  - crd-extension.yaml
+  - config-info.yaml
+  - deployment.yaml
+  - role.yaml
+  - rolebinding.yaml
+  - serviceaccount.yaml
+  - service.yaml
+images:
+  - name: gcr.io/tekton-releases/github.com/tektoncd/dashboard/cmd/dashboard
+    newTag: v0.39.0@sha256:93dd10e7e49e7d409721b27e19ebbde21fd7ef263ea07e256580621428976eb4
