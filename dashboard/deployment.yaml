@@ -26,11 +26,14 @@ spec:
           image: gcr.io/tekton-releases/github.com/tektoncd/dashboard/cmd/dashboard
           args:
             - --port=9097
+            - --namespaces=$(NAMESPACES)
           env:
             - name: INSTALLED_NAMESPACE
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.namespace
+            - name: NAMESPACES
+              value: $(INSTALLED_NAMESPACE)
           ports:
             - containerPort: 9097
           livenessProbe:
