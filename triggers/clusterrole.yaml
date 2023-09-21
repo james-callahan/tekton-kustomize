@@ -73,8 +73,8 @@ rules:
     resources: ["events"]
     verbs: ["create", "patch"]
 ---
-kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
 metadata:
   name: tekton-triggers-eventlistener-clusterroles
 rules:
