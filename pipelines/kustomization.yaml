@@ -26,4 +26,5 @@ resources:
   - config-observability.yaml
   - config-registry-cert.yaml
   - config-spire.yaml
+  - config-tracing.yaml
   - role-tekton-pipelines-info.yaml
