@@ -13,5 +13,15 @@
         ],
       "datasourceTemplate": "docker"
     }
+  ],
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["^gcr\\.io/tekton-releases/github\\.com/tektoncd/pipeline/cmd/"],
+      "groupName": "pipelines"
+    },
+    {
+      "matchPackagePatterns": ["^gcr\\.io/tekton-releases/github\\.com/tektoncd/triggers/cmd/"],
+      "groupName": "triggers"
+    }
   ]
 }
