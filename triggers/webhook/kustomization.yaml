@@ -12,4 +12,4 @@ resources:
   - webhooks.yaml
 images:
   - name: gcr.io/tekton-releases/github.com/tektoncd/triggers/cmd/webhook
-    newTag: v0.25.0@sha256:954347e26c030162ac7c823fb617989fc68a276b7ba061fd3c71f265a555af91
+    newTag: v0.25.2@sha256:99357158ef5cedff9d26eca0da4169338b14e281c686412a79e441f69809a208
