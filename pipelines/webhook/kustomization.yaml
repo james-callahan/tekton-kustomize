@@ -4,6 +4,7 @@ commonLabels:
   app.kubernetes.io/component: webhook
 resources:
   - clusterrole.yaml
+  - config-leader-election.yaml
   - hpa.yaml
   - role.yaml
   - serviceaccount.yaml

@@ -4,6 +4,7 @@ commonLabels:
   app.kubernetes.io/component: events
 resources:
   - clusterrole.yaml
+  - config-leader-election.yaml
   - events.yaml
   - role.yaml
   - serviceaccount.yaml

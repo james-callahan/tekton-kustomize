@@ -8,6 +8,7 @@ resources:
   - crd-pipelinerun.yaml
   - crd-pipeline.yaml
   - crd-resolutionrequest.yaml
+  - crd-stepaction.yaml
   - crd-taskrun.yaml
   - crd-task.yaml
   - crd-verificationpolicy.yaml
@@ -21,7 +22,6 @@ resources:
   - config-events.yaml
   - config-feature-flags.yaml
   - config-info.yaml
-  - config-leader-election.yaml
   - config-logging.yaml
   - config-observability.yaml
   - config-registry-cert.yaml

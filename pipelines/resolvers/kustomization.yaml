@@ -7,6 +7,7 @@ resources:
   - cluster-resolver-config.yaml
   - clusterrole.yaml
   - config-feature-flags.yaml
+  - config-leader-election.yaml
   - deployment.yaml
   - git-resolver-config.yaml
   - hubresolver-config.yaml
