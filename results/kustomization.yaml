@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - https://github.com/tektoncd/results/config/base?ref=b143afec571711b7ea1328efe5a1c0e6dc826a02 # branch=main
+components:
+  # This should always be the last component as per: https://github.com/tektoncd/results/blob/main/config/components/metadata/kustomization.yaml#L15-L16
+  - https://github.com/tektoncd/results/config/components/metadata?ref=cf76e5a5bba1bb7054865f8bce39c3ec72b3257e # tag=v0.8.1
+images:
+  - name: ko://github.com/tektoncd/results/cmd/api
+    newName: gcr.io/tekton-releases/github.com/tektoncd/results/cmd/api
+    newTag: v0.8.1@sha256:a64bbb6839a12bb65fbc4a129743b086109b8d1eed318aeb16c97ac8b616a2cf
+  - name: ko://github.com/tektoncd/results/cmd/watcher
+    newName: gcr.io/tekton-releases/github.com/tektoncd/results/cmd/watcher
+    newTag: v0.8.1@sha256:f9e14dc51e223e159dee5714396514f72dc2114997d91838017f4596a2cad142
