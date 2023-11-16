@@ -3,6 +3,7 @@ kind: Kustomization
 commonLabels:
   app.kubernetes.io/component: resolvers
 resources:
+  - ../../configurations/prometheus-operator
   - bundleresolver-config.yaml
   - cluster-resolver-config.yaml
   - clusterrole.yaml
@@ -13,6 +14,7 @@ resources:
   - hubresolver-config.yaml
   - role.yaml
   - serviceaccount.yaml
+  - servicemonitor.yaml
   - service.yaml
 images:
   - name: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/resolvers

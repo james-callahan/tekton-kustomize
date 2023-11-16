@@ -3,9 +3,11 @@ kind: Kustomization
 commonLabels:
   app.kubernetes.io/component: events
 resources:
+  - ../../configurations/prometheus-operator
   - clusterrole.yaml
   - config-leader-election.yaml
   - events.yaml
+  - podmonitor.yaml
   - role.yaml
   - serviceaccount.yaml
 images:

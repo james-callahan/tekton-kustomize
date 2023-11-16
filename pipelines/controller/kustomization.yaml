@@ -3,9 +3,11 @@ kind: Kustomization
 commonLabels:
   app.kubernetes.io/component: controller
 resources:
+  - ../../configurations/prometheus-operator
   - clusterrole.yaml
   - config-leader-election.yaml
   - controller.yaml
+  - podmonitor.yaml
   - role.yaml
   - serviceaccount.yaml
 patches:

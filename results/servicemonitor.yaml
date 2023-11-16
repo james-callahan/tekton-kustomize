@@ -1,0 +1,21 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: tekton-results-api
+spec:
+  endpoints:
+    - port: prometheus
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: tekton-results-api
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: tekton-results-watcher
+spec:
+  endpoints:
+    - port: metrics
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: tekton-results-watcher

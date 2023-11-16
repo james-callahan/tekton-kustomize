@@ -3,11 +3,13 @@ kind: Kustomization
 commonLabels:
   app.kubernetes.io/component: webhook
 resources:
+  - ../../configurations/prometheus-operator
   - clusterrole.yaml
   - config-leader-election.yaml
   - hpa.yaml
   - role.yaml
   - serviceaccount.yaml
+  - servicemonitor.yaml
   - webhook.yaml
   - webhooks.yaml
 images:
