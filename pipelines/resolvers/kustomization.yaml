@@ -12,6 +12,7 @@ resources:
   - deployment.yaml
   - git-resolver-config.yaml
   - hubresolver-config.yaml
+  - http-resolver-config.yaml
   - role.yaml
   - serviceaccount.yaml
   - servicemonitor.yaml
