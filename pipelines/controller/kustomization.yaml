@@ -37,7 +37,7 @@ patches:
                     value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/workingdirinit:v0.55.0@sha256:093e58239bd6d7c6c6314354694a94ba846d8aa2aad6e57fda32854c8e85adde
                   - name: SHELL_IMAGE
                     # renovate: datasource=docker
-                    value: cgr.dev/chainguard/busybox:latest@sha256:19f02276bf8dbdd62f069b922f10c65262cc34b710eea26ff928129a736be791
+                    value: cgr.dev/chainguard/busybox:latest@sha256:8b5651a62923515d6f6c8b37bce0ce341c60292f4929c5bb21f496a45857f5ae
                   - name: SHELL_IMAGE_WIN
                     # renovate: datasource=docker
                     value: mcr.microsoft.com/powershell:nanoserver@sha256:b6d5ff841b78bdf2dfed7550000fd4f3437385b8fa686ec0f010be24777654d6
