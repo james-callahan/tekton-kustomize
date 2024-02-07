@@ -42,7 +42,7 @@ patches:
 images:
   - name: ko://github.com/tektoncd/results/cmd/api
     newName: gcr.io/tekton-releases/github.com/tektoncd/results/cmd/api
-    newTag: v0.8.1@sha256:a64bbb6839a12bb65fbc4a129743b086109b8d1eed318aeb16c97ac8b616a2cf
+    newTag: v0.9.1@sha256:f0580a2dbca687491f7422518be304fdffdef6d7549a1b5a425bb376af56b050
   - name: ko://github.com/tektoncd/results/cmd/watcher
     newName: gcr.io/tekton-releases/github.com/tektoncd/results/cmd/watcher
     newTag: v0.8.1@sha256:f9e14dc51e223e159dee5714396514f72dc2114997d91838017f4596a2cad142
