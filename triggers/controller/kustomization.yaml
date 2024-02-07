@@ -23,7 +23,7 @@ patches:
                 env:
                   - name: EL_IMAGE
                     # renovate: datasource=docker
-                    value: gcr.io/tekton-releases/github.com/tektoncd/triggers/cmd/eventlistenersink:v0.25.3@sha256:f75e31644a5727a6c0721f70e3b6fce8456626940cd6f7b53f50bf1d68b5d5ba
+                    value: gcr.io/tekton-releases/github.com/tektoncd/triggers/cmd/eventlistenersink:v0.26.0@sha256:f3a448a5834ae092ed548508e83b080f57f90b0fb4c1e7227fe80366053ec764
 images:
   - name: gcr.io/tekton-releases/github.com/tektoncd/triggers/cmd/controller
-    newTag: v0.25.3@sha256:2e58e53fc208473b7e49fd1f1263fc770d4fd857030d4b0847c6cc3d32cfc43e
+    newTag: v0.26.0@sha256:b12fd00f697b861d2edeb39588df3d8038a1ed3c81f16ff0349512cd6da5dac1
