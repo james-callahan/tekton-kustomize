@@ -2,43 +2,26 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ../configurations/prometheus-operator
-  - https://github.com/tektoncd/results/config/base?ref=b143afec571711b7ea1328efe5a1c0e6dc826a02 # branch=main
+  - https://github.com/tektoncd/results/config/base?ref=5619404f17c7b67f1f0e3cb64a88dac4ae17625a # tag=v0.9.1
   - servicemonitor.yaml
 components:
   # This should always be the last component as per: https://github.com/tektoncd/results/blob/main/config/components/metadata/kustomization.yaml#L15-L16
-  - https://github.com/tektoncd/results/config/components/metadata?ref=cf76e5a5bba1bb7054865f8bce39c3ec72b3257e # tag=v0.8.1
+  - https://github.com/tektoncd/results/config/components/metadata?ref=5619404f17c7b67f1f0e3cb64a88dac4ae17625a # tag=v0.9.1
 patches:
-  # Clear out namespace from upstream kustomize base
-  - target:
-      kind: .*RoleBinding
-      labelSelector: app.kubernetes.io/name!=tekton-results-info
-    patch: |-
-      - op: test
-        path: /subjects/0/kind
-        value: ServiceAccount
-      - op: test
-        path: /subjects/0/namespace
-        value: tekton-pipelines
-      - op: remove
-        path: /subjects/0/namespace
-  - target:
+  - patch: |
+      apiVersion: apps/v1
       kind: Deployment
-      name: tekton-results-watcher
-    patch: |-
-      - op: test
-        path: /spec/template/spec/containers/0/name
-        value: watcher
-      - op: test
-        path: /spec/template/spec/containers/0/args/1
-        value: tekton-results-api-service.tekton-pipelines.svc.cluster.local:8080
-      - op: replace
-        path: /spec/template/spec/containers/0/args/1
-        value: tekton-results-api-service.$(SYSTEM_NAMESPACE).svc.cluster.local:8080
-  - target:
-      namespace: tekton-pipelines
-    patch: |-
-      - op: remove
-        path: /metadata/namespace
+      metadata:
+        name: tekton-results-watcher
+      spec:
+        template:
+          spec:
+            containers:
+              - name: watcher
+                env:
+                  - name: SYSTEM_NAMESPACE
+                  - name: TEKTON_RESULTS_API_SERVICE
+                    value: tekton-results-api-service.$(SYSTEM_NAMESPACE).svc.cluster.local:8080
 images:
   - name: ko://github.com/tektoncd/results/cmd/api
     newName: gcr.io/tekton-releases/github.com/tektoncd/results/cmd/api
