@@ -27,6 +27,10 @@
       "groupName": "pipelines"
     },
     {
+      "matchPackagePatterns": ["^gcr\\.io/tekton-releases/github\\.com/tektoncd/results/cmd/"],
+      "groupName": "results"
+    },
+    {
       "matchPackagePatterns": ["^gcr\\.io/tekton-releases/github\\.com/tektoncd/triggers/cmd/"],
       "groupName": "triggers"
     }
