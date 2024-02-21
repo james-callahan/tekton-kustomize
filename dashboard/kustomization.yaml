@@ -16,4 +16,4 @@ resources:
   - service.yaml
 images:
   - name: gcr.io/tekton-releases/github.com/tektoncd/dashboard/cmd/dashboard
-    newTag: v0.43.1@sha256:ffb5441e6f761d9b32b73ec78a2816c1626a0fd06ea14977113453b5717d7280
+    newTag: v0.44.0@sha256:4bcfc6ee5b0c9d1256bb7e148cd9882fb65d4e83e18dc2dd11a3fa736f7a3b00
