@@ -13,4 +13,4 @@ resources:
   - serviceaccount.yaml
 images:
   - name: gcr.io/tekton-releases/github.com/tektoncd/triggers/cmd/interceptors
-    newTag: v0.26.1@sha256:ffc13aab0d0e16836c98bdf15f516a7f9df4e3eed1184a64825193f6a2fa6753
+    newTag: v0.26.2@sha256:80508a5a9c014cda7ab34bed2c32cbabfcadab58f24dc098d469a1f4d1ee531e
