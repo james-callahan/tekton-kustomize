@@ -19,4 +19,4 @@ resources:
   - service.yaml
 images:
   - name: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/resolvers
-    newTag: v0.59.0@sha256:80015cd2b4bb73ea894733eec96befcf2e61670017cf579f4cd75a393ae7dd41
+    newTag: v0.60.2@sha256:e52d311ddd10605a2a7266c55616cbd2d85d492de7acbd9804d29dd23e0cbd6e
