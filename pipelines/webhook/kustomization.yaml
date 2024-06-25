@@ -14,4 +14,4 @@ resources:
   - webhooks.yaml
 images:
   - name: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/webhook
-    newTag: v0.60.2@sha256:db5fbc8c1fd26db5006ff34d12a271c535d6a1d29a3ca0de82141ea37d7401c8
+    newTag: v0.61.0@sha256:9a49179d137025744b85abb46902ad3bce5ec9fa0ff4ee4997a18e74bad2624d
