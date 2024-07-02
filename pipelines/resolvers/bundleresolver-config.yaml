@@ -17,5 +17,7 @@ kind: ConfigMap
 metadata:
   name: bundleresolver-config
 data:
+  # the default service account name to use for bundle requests.
+  default-service-account: "default"
   # The default layer kind in the bundle image.
   default-kind: "task"
