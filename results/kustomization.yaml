@@ -2,11 +2,11 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ../configurations/prometheus-operator
-  - github.com/tektoncd/results/config/base?ref=067091ebe78b0802f9eb632aa5dc4a792d8cd3c5 # tag=v0.10.0
+  - github.com/tektoncd/results/config/base?ref=1e174ecc7e03dd6e98b027597366d79cd427119f # tag=v0.11.0
   - servicemonitor.yaml
 components:
   # This should always be the last component as per: https://github.com/tektoncd/results/blob/main/config/components/metadata/kustomization.yaml#L15-L16
-  - github.com/tektoncd/results/config/components/metadata?ref=067091ebe78b0802f9eb632aa5dc4a792d8cd3c5 # tag=v0.10.0
+  - github.com/tektoncd/results/config/components/metadata?ref=1e174ecc7e03dd6e98b027597366d79cd427119f # tag=v0.11.0
 patches:
   - patch: |
       apiVersion: apps/v1
@@ -25,7 +25,7 @@ patches:
 images:
   - name: ko://github.com/tektoncd/results/cmd/api
     newName: gcr.io/tekton-releases/github.com/tektoncd/results/cmd/api
-    newTag: v0.10.0@sha256:f4fb7d9119038795625515056368f8e055032cb7fece7084e2e553fb7b094f0b
+    newTag: v0.11.0@sha256:104a74afbf5ec8c8de3615b040d84789abe3d5cc7b7fd298178d59f72ddecc6e
   - name: ko://github.com/tektoncd/results/cmd/watcher
     newName: gcr.io/tekton-releases/github.com/tektoncd/results/cmd/watcher
-    newTag: v0.10.0@sha256:202173c2d69d56f39cfeb1e97de546982d61d04368f2f887ba46b7ba96ad9c20
+    newTag: v0.11.0@sha256:c6f763a8490cf16721dce30b5d52af205fb95b097f627ca1adab7af1f357078d
