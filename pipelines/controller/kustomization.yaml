@@ -25,16 +25,16 @@ patches:
                 env:
                   - name: ENTRYPOINT_IMAGE
                     # renovate: datasource=docker
-                    value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/entrypoint:v0.61.0@sha256:56da5618bf121a8c7d81e5a7260b38ab614f3e439cc3327c93ca2251773ab43b
+                    value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/entrypoint:v0.61.1@sha256:75da0dcaba100d13e16900c9d965c47fc6accb5f5c347980d984da4d3d916ef2
                   - name: NOP_IMAGE
                     # renovate: datasource=docker
-                    value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/nop:v0.61.0@sha256:a5ce35b36031084455ae2002f7466b7bdaf49c46a9f7f9ec4d2228e262ee146e
+                    value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/nop:v0.61.1@sha256:4d28923550e592a2ad9a6ddfb82734840154e35451d06991007c7d9d7c5840ba
                   - name: SIDECARLOGRESULTS_IMAGE
                     # renovate: datasource=docker
-                    value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/sidecarlogresults:v0.61.0@sha256:7f458d2460e45b41586730ceb8f683a8ef4ae9699454af2454509527812574dd
+                    value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/sidecarlogresults:v0.61.1@sha256:caaf1305676b86a95d717d7409e7fd09673e375c00d0136b2387083faa2ddd18
                   - name: WORKINGDIRINIT_IMAGE
                     # renovate: datasource=docker
-                    value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/workingdirinit:v0.61.0@sha256:9fcd6e9ecacb2243e5b56bd4c042c2c585fbabf2d49c20d9c09b178ba8876083
+                    value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/workingdirinit:v0.61.1@sha256:a8e3d3b22b98e0b74661442ef2eb8e4b61625dee4899e63db0c0f2b51399b02f
                   - name: SHELL_IMAGE
                     # renovate: datasource=docker
                     value: cgr.dev/chainguard/busybox:latest@sha256:19f02276bf8dbdd62f069b922f10c65262cc34b710eea26ff928129a736be791
@@ -43,4 +43,4 @@ patches:
                     value: mcr.microsoft.com/powershell:nanoserver@sha256:b6d5ff841b78bdf2dfed7550000fd4f3437385b8fa686ec0f010be24777654d6
 images:
   - name: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/controller
-    newTag: v0.61.0@sha256:b4ec78d2267e176abc7aac89f90fe36d8698f5b4472a64b738b69f13e84f6b36
+    newTag: v0.61.1@sha256:b11a8dde08800cb30a780c5c5fbd993c89869ba948f1bd53fafbe6fa45566fe7
