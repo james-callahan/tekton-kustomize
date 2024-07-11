@@ -46,6 +46,7 @@ spec:
               containerPort: 8443
           securityContext:
             allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
             runAsUser: 65532
             runAsGroup: 65532
             runAsNonRoot: true
