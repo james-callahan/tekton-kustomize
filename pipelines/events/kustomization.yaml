@@ -12,4 +12,4 @@ resources:
   - serviceaccount.yaml
 images:
   - name: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/events
-    newTag: v0.61.1@sha256:9c6d8381e50e5b6de75b53b1964b64a8fff18bedc9b87fb1ac03cb3859521318
+    newTag: v0.62.0@sha256:da11246f95d0556d56c82cad981d3bea861e4d65ef2be282ebdcfab2a5454faf
