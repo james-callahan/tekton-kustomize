@@ -40,6 +40,7 @@ rules:
   - apiGroups:
       - tekton.dev
     resources:
+      - stepactions
       - tasks
       - taskruns
       - pipelines
