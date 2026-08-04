@@ -2,11 +2,11 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ../configurations/prometheus-operator
-  - github.com/tektoncd/results/config/base?ref=a3d212b35550664e17017181f8c8192bc5085b06 # tag=v0.13.0
+  - github.com/tektoncd/results/config/base?ref=e175d25e526e9ac7221e50011d2ef3b845502002 # tag=v0.20.0
   - servicemonitor.yaml
 components:
   # This should always be the last component as per: https://github.com/tektoncd/results/blob/main/config/components/metadata/kustomization.yaml#L15-L16
-  - github.com/tektoncd/results/config/components/metadata?ref=a3d212b35550664e17017181f8c8192bc5085b06 # tag=v0.13.0
+  - github.com/tektoncd/results/config/components/metadata?ref=e175d25e526e9ac7221e50011d2ef3b845502002 # tag=v0.20.0
 patches:
   - patch: |
       apiVersion: apps/v1
